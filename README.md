@@ -21,9 +21,9 @@ Dateien liegen im Ordner [test-results](test-results) und können über den "Tra
 
 Testergebnisse für einzelne Commits können wie folgt aufgerufen werden:
 
-https://trace.playwright.dev/?trace=https://raw.githubusercontent.com/opencultureconsulting/dla-opac-tests/c27b6ec/test-results/suche-ricarda-huch-desktop/trace.zip
+https://trace.playwright.dev/?trace=https://raw.githubusercontent.com/opencultureconsulting/dla-opac-tests/de37bfc/test-results/suche-ricarda-huch-desktop/trace.zip
 
-* commit hash "c27b6ec" ersetzen
+* commit hash "de37bfc" ersetzen
 * testname "suche-ricarda-huch" ggf. ersetzen
 * device "desktop" ggf. durch "mobile" ersetzen
 
