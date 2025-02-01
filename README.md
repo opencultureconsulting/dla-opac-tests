@@ -7,9 +7,10 @@ run Playwright tests with GitHub Actions and upload test-results (trace.zip) to 
 
 ## View results in Playwright Trace Viewer
 
-Desktop: https://trace.playwright.dev/?trace=https://raw.githubusercontent.com/felixlohmeier/playwright-github-action/refs/heads/main/test-results/example-get-started-link-desktop/trace.zip
-
-Mobile: https://trace.playwright.dev/?trace=https://raw.githubusercontent.com/felixlohmeier/playwright-github-action/refs/heads/main/test-results/example-get-started-link-mobile/trace.zip
+* see [tags / commit messages](https://github.com/felixlohmeier/playwright-github-action/tags)
+* latest run:
+  * Desktop: https://trace.playwright.dev/?trace=https://raw.githubusercontent.com/felixlohmeier/playwright-github-action/refs/heads/main/test-results/example-get-started-link-desktop/trace.zip
+  * Mobile: https://trace.playwright.dev/?trace=https://raw.githubusercontent.com/felixlohmeier/playwright-github-action/refs/heads/main/test-results/example-get-started-link-mobile/trace.zip
 
 ## Development in GitHub Codespaces
 
