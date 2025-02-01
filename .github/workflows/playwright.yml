@@ -22,8 +22,5 @@ jobs:
         git config user.name "Automated"
         git config user.email "actions@users.noreply.github.com"
         git add test-results
-        tag="$(date +%s)"
-        git commit -m "latest change: $(date -u)" -m "view trace:https://trace.playwright.dev/?trace=https://raw.githubusercontent.com/felixlohmeier/playwright-github-action/refs/tags/${tag}/test-results/example-get-started-link-desktop/trace.zip" || exit 0
-        git tag "$tag"
+        git commit -m "latest change: $(date -u)" || exit 0
         git push
-        git push --tags
