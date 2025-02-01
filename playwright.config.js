@@ -21,11 +21,11 @@ export default defineConfig({
   /* Configure projects for browsers */
   projects: [
     {
-      name: 'chromium',
+      name: 'desktop',
       use: { ...devices['Desktop Chrome'] },
     },
     {
-       name: 'Mobile Chrome',
+       name: 'mobile',
        use: { ...devices['Pixel 5'] },
      },
   ],
