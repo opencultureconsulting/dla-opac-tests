@@ -28,11 +28,20 @@ https://trace.playwright.dev/?trace=https://raw.githubusercontent.com/opencultur
 * testname "suche-ricarda-huch" ggf. ersetzen
 * device "desktop" ggf. durch "mobile" ersetzen
 
-## Development in GitHub Codespaces
+## Entwkicklung in GitHub Codespaces
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/opencultureconsulting/dla-opac-tests)
 
 ```
 npx playwright test --reporter html
 npx playwright show-report
+```
+
+## Entwicklung lokal mit Visual Studio Code
+
+```
+git clone git@github.com:opencultureconsulting/dla-opac-tests.git
+cd dla-opac-tests
+npm i --save-dev @playwright/test
+npx playwright install chromium --with-deps
 ```
