@@ -8,7 +8,7 @@ const selector_query_text = '//li/input[normalize-space(@type)=\'text\']';
 const selector_button_search = 'text=Jetzt suchen';
 
 test('ricarda-huch', async ({ page }) => {
-  await page.goto('https://www.dla-marbach.de/katalog');
+  await page.goto('katalog');
   await page.click(selector_query_text);
   await page.fill(selector_query_text, 'Ricarda Huch');
   await page.click(selector_button_search);

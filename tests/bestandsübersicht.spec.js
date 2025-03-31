@@ -2,7 +2,7 @@
 import { test, expect } from '@playwright/test';
 
 test('kafka', async ({ page }) => {
-  await page.goto('https://www.dla-marbach.de/bestandsuebersicht');
+  await page.goto('bestandsuebersicht');
   await page.getByRole('textbox', { name: 'Suche in der Bestandsübersicht' }).click();
   await page.getByRole('textbox', { name: 'Suche in der Bestandsübersicht' }).fill('kafka');
   await page.getByRole('article').filter({ hasText: 'K' }).getByRole('link').click()
