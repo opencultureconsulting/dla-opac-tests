@@ -45,3 +45,5 @@ cd dla-opac-tests
 npm i --save-dev @playwright/test
 npx playwright install chromium --with-deps
 ```
+
+Zum Testen des Testsystems die baseURL in [playwright.config.js](playwright.config.js) anpassen.
