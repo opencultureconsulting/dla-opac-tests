@@ -1,17 +1,23 @@
 // @ts-check
 import { test, expect } from '@playwright/test';
 
-// Selector des Eingabefeldes
-const selector_query_text = '//li/input[normalize-space(@type)=\'text\']';
-
-// Selector für den "Suche starten"-Button
-const selector_button_search = 'text=Jetzt suchen';
-
 test('ricarda-huch', async ({ page }) => {
   await page.goto('katalog');
-  await page.click(selector_query_text);
-  await page.fill(selector_query_text, 'Ricarda Huch');
-  await page.click(selector_button_search);
+  // Suche
+  await page.locator('#token-input-c-field-').click();
+  await page.locator('#token-input-c-field-').fill('Ricarda Huch');
+  await page.getByRole('button', { name: ' Jetzt suchen' }).click();
+  // Erwarte bestimmten Text auf der Seite (hier Normdaten-Werbetreffer)
   await page.waitForLoadState();
-  expect(await page.content()).toMatch('Huch, Ricarda');
+  await expect(page.locator('#content-area')).toContainText('Huch, Ricarda (1864-1947)');
 });
+
+test('schiller', async ({ page }) => {
+  await page.goto('katalog');
+  // Autovervollständigung
+  await page.locator('#token-input-c-field-').click();
+  await page.locator('#token-input-c-field-').fill('schiller');
+  await page.waitForLoadState();
+  await expect(page.locator('#content-area')).toContainText('Huch, Ricarda (1864-1947)');
+});
+
