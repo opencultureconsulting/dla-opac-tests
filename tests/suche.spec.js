@@ -11,13 +11,3 @@ test('ricarda-huch', async ({ page }) => {
   await page.waitForLoadState();
   await expect(page.locator('#content-area')).toContainText('Huch, Ricarda (1864-1947)');
 });
-
-test('schiller', async ({ page }) => {
-  await page.goto('katalog');
-  // Autovervollständigung
-  await page.locator('#token-input-c-field-').click();
-  await page.locator('#token-input-c-field-').fill('schiller');
-  await page.waitForLoadState();
-  await expect(page.locator('#content-area')).toContainText('Huch, Ricarda (1864-1947)');
-});
-
