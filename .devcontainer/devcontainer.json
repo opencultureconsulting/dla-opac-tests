@@ -1,6 +1,3 @@
 {
-	"image": "mcr.microsoft.com/devcontainers/universal:2",
-	"features": {
-	},
 	"postCreateCommand": "npm ci && npx playwright install chromium --with-deps"
 }
